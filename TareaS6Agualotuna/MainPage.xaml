@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaS6Agualotuna.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumir web service GET" FontSize="20" HorizontalTextAlignment="Center"></Label>
+        <Label x:Name="texto" Text=""></Label>
+        
+        <ListView x:Name="MyListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblcodigo" Text="{Binding codigo}"></Label>
+                            <Label x:Name="lblnombre" Text="{Binding nombre}"></Label>
+                            <Label x:Name="lblapelllido" Text="{Binding apellido}"></Label>
+                            <Label x:Name="lbledad" Text="{Binding edad}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Text="Insertar" x:Name="btnInsertar" Clicked="btnInsertar_Clicked"></Button>
+        <Button Text="Actualizar" x:Name="btnActualizar" Clicked="btnActualizar_Clicked"></Button>
+        <Button Text="Eliminar" x:Name="btnEliminar" Clicked="btnEliminar_Clicked"></Button>
+
+    </StackLayout>
+
+</ContentPage>
